@@ -1,0 +1,33 @@
+# Site settings
+title: Housing Hands
+email: contact@housinghands.org
+description: >-
+  Building communities, one home at a time. Join us in making a difference
+  through affordable housing initiatives and community development.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Navigation
+header_pages:
+  - about.md
+  - projects.md
+  - volunteer.md
+  - events.md
+  - contact.md
+
+# Social links
+twitter_username: housinghands
+github_username: housinghands
+
+# Minima specific
+minima:
+  skin: classic
+  social_links:
+    twitter: housinghands
+    github: housinghands
+    linkedin: housing-hands
