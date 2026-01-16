@@ -3,228 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - Developer & Designer</title>
+    <title>iFrame Website</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 60px 20px;
+        
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
-
-        header {
-            margin-bottom: 60px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e1e4e8;
+        
+        .iframe-container {
+            width: 100%;
+            height: 100vh;
         }
-
-        h1 {
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #111;
-        }
-
-        .tagline {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        nav {
-            margin-top: 20px;
-        }
-
-        nav a {
-            color: #0366d6;
-            text-decoration: none;
-            margin-right: 20px;
-            font-size: 0.95em;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            margin-bottom: 50px;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #111;
-        }
-
-        h3 {
-            font-size: 1.3em;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #111;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        .post {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .post:last-child {
-            border-bottom: none;
-        }
-
-        .post-date {
-            font-size: 0.9em;
-            color: #999;
-            margin-bottom: 5px;
-        }
-
-        .post-title {
-            font-size: 1.4em;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .post-title a {
-            color: #111;
-            text-decoration: none;
-        }
-
-        .post-title a:hover {
-            color: #0366d6;
-        }
-
-        .project {
-            margin-bottom: 25px;
-        }
-
-        .project-name {
-            font-weight: 600;
-            color: #0366d6;
-            text-decoration: none;
-            font-size: 1.1em;
-        }
-
-        .project-name:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid #e1e4e8;
-            text-align: center;
-            color: #999;
-            font-size: 0.9em;
-        }
-
-        footer a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .social-links {
-            margin-bottom: 15px;
-        }
-
-        .social-links a {
-            margin: 0 10px;
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>John Doe</h1>
-        <p class="tagline">Developer & Designer</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#blog">Blog</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <section id="about">
-            <h2>About</h2>
-            <p>Hello! I'm a full-stack developer passionate about creating elegant solutions to complex problems. I specialize in web technologies and enjoy building tools that make people's lives easier.</p>
-            <p>When I'm not coding, you'll find me reading, exploring the outdoors, or experimenting with new technologies.</p>
-        </section>
-
-        <section id="blog">
-            <h2>Recent Posts</h2>
-            
-            <article class="post">
-                <div class="post-date">January 15, 2026</div>
-                <h3 class="post-title"><a href="#">Building Scalable Web Applications</a></h3>
-                <p>A deep dive into architectural patterns and best practices for creating web applications that can handle growth and maintain performance at scale.</p>
-            </article>
-
-            <article class="post">
-                <div class="post-date">January 8, 2026</div>
-                <h3 class="post-title"><a href="#">The Beauty of Minimalist Design</a></h3>
-                <p>Why less is more when it comes to user interfaces, and how minimalism can improve both aesthetics and usability in your projects.</p>
-            </article>
-
-            <article class="post">
-                <div class="post-date">December 28, 2025</div>
-                <h3 class="post-title"><a href="#">Getting Started with Modern JavaScript</a></h3>
-                <p>An introduction to ES6+ features and how they've transformed the way we write JavaScript in modern web development.</p>
-            </article>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            
-            <div class="project">
-                <a href="#" class="project-name">TaskFlow</a>
-                <p>A minimalist task management application built with vanilla JavaScript and local storage.</p>
-            </div>
-
-            <div class="project">
-                <a href="#" class="project-name">DevTools Collection</a>
-                <p>A curated set of developer utilities and tools for everyday coding tasks.</p>
-            </div>
-
-            <div class="project">
-                <a href="#" class="project-name">Portfolio Template</a>
-                <p>An open-source, responsive portfolio template for developers and designers.</p>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Get in Touch</h2>
-            <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out if you'd like to connect!</p>
-            <p>Email: <a href="mailto:hello@johndoe.com">hello@johndoe.com</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <div class="social-links">
-            <a href="#">GitHub</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
-        </div>
-        <p>&copy; 2026 John Doe. All rights reserved.</p>
-    </footer>
+    <div class="iframe-container">
+        <iframe src="https://example.com" title="Embedded Content"></iframe>
+    </div>
 </body>
 </html>
